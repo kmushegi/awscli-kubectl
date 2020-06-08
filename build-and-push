@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+############################################################
+## This script builds & pushes a awscli-kubectl image     ##
+## that is used to update the aws ecr credentials k8s     ##
+## secret.                                                ##
+############################################################
+
+docker build -f Dockerfile -t kmushegi/awscli-kubectl:latest .
+docker push kmushegi/awscli-kubectl:latest
